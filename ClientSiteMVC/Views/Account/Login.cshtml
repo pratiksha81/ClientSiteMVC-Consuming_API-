@@ -1,0 +1,79 @@
+﻿@model ClientSiteMVC.Models.LoginViewModel
+
+<form asp-action="Login" method="post" class="login-form">
+    <h2 class="text-center">Login</h2>
+
+    <div class="form-group">
+        <label asp-for="Username" class="control-label"></label>
+        <input asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">
+        Login
+    </button>
+</form>
+
+<style>
+    /* General form styling */
+    .login-form {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        /* Heading style */
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    /* Input field styling */
+    .form-control {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+        }
+
+    /* Label styling */
+    .control-label {
+        font-weight: bold;
+        color: indianred;
+    }
+
+    /* Button styling */
+    .btn {
+        background-color: #007bff;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+    /* Validation text */
+    .text-danger {
+        color: #e74c3c;
+        font-size: 14px;
+    }
+</style>
